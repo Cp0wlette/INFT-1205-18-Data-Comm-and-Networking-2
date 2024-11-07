@@ -1,0 +1,21 @@
+
+	Configuration of BD1
+enable
+config t
+hostname BD1
+no ip domain lookup
+exit
+config t
+enable password cisco
+line con 0
+password cisco
+login
+line vty 0 15
+enable password cisco
+service password-encryption
+banner motd # 
+***********************************************
+WARNING: Unauthorized access is prohibited!
+***********************************************
+#
+vlan
